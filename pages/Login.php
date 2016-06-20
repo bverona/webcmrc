@@ -60,7 +60,7 @@ session_destroy();
                             <input class="form-control" name="pass" type="password" placeholder="Contraseña" id="pass"/>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row"><br/>
                         <div class="col-xs-12 col-md-offset-3 col-md-4">
                             <input class="btn btn-success btn-block" type="button" id="login" value="Ingresar"/>
                         </div>
@@ -146,7 +146,7 @@ $(document).ready(function()
                     {
                         //$("body").load("home.php").hide().fadeIn(1500).delay(6000);
                         //or
-                        window.location.href = "Administrator.php";
+                        window.location.href = "Gestionar.php";
                     }
                     else
                     {

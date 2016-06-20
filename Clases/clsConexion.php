@@ -5,7 +5,7 @@
     
        $host="mysql:host=localhost;port=3306;dbname=db_news";
        $usuario="root";
-       $clave="bruno";
+       $clave="";
        $dblink=new PDO($host, $usuario, $clave);
        $dblink->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
        

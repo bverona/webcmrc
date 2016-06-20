@@ -28,6 +28,46 @@ class Notice {
 
     }
 
+    public function Edite($id,$title,$imgp,$imgg,$body){
+
+        require_once "clsConexion.php";
+        $objCon =new Conexion();
+
+        $sql="update news set titulo='".$title."'".",small_photo='".$imgp."'".",big_photo='".$imgg."'".",content='".$body."' where id=".$id;
+
+        echo $sql;
+
+        $reg=$objCon->Consultar($sql);
+
+        if($reg!=null)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+
+    }
+
+    public function Delete($id){
+
+        require_once "clsConexion.php";
+        $objCon =new Conexion();
+
+        $sql="update news set  state=2 where id=".$id;
+        echo $sql;
+        $reg=$objCon->Consultar($sql);
+
+        if($reg!=null)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+
+    }
+
     public function GetNotice($id){
 
         require_once "clsConexion.php";
@@ -78,8 +118,20 @@ class Notice {
 
         $resul=$objCon->Consultar($sql);
 
+        $nbsp="&nbsp;";
         while($reg=$resul->fetch())
         {
+            $titulo=$reg["titulo"];
+
+            if(strlen($titulo)>=60){
+                $titulo = substr($reg["titulo"],0,56)."...";
+            }elseif(strlen($titulo)<=30){
+                for ($i=1;$i<(23-strlen($titulo)) ;$i++){
+                    $nbsp.=$nbsp;
+                }
+                $titulo.=$nbsp." ";
+            }
+
             echo '
                     <div class="col-md-4">
                         <div class="grid-post">
@@ -89,7 +141,7 @@ class Notice {
                             </div>
                             <div class="post-detail">
                                 <div class="author-img"><img src="https://placeholdit.imgix.net/~text?txtsize=11&txt=Noticias&w=65&h=58" alt=""></div>
-                                <h4><a href="#" onclick="getNotice('.$reg["id"].')" title="">'.$reg["titulo"].'</a></h4>
+                                <h5><a href="#" onclick="getNotice('.$reg["id"].')" title=""><b> '.$titulo.'</b></a></h5>
                             </div>
                         </div>
                         <!-- Grid Post -->
@@ -109,7 +161,7 @@ class Notice {
               when state=1 then 'Activo'
               when state=0 then 'Inactivo'
             end  as dato
-            from news order by 6 asc";
+            from news where state<>2 order by 6 desc ";
 
         $resul=$objCon->Consultar($sql);
 
@@ -132,7 +184,7 @@ class Notice {
                             </p>
                         </td>
                         <td class="text-center">
-                            <p class="text-center">
+                            <p class="text-left">
                             '.$reg["titulo"].'
                             </p>
                         </td>
@@ -153,12 +205,12 @@ class Notice {
                         </td>
                         <td >
                             <p class="text-center">
-                                <button onclick="Eliminar('.$reg["id"].')" class="btn btn-danger" style="color: #080808">Eliminar</button>
+                            <a data-toggle="modal" href="#eliminar" onclick="Set('.$reg["id"].')" class="btn btn-danger">Eliminar</a>
                             </p>
                         </td>
                     </tr>
                 ';
-        }
+        }/*  <button onclick="Set('.$reg["id"].')" class="btn btn-danger" style="color: #080808">Eliminar</button>*/
     }
 
     public function ChangeStateNotice($id,$state)
@@ -178,7 +230,6 @@ class Notice {
         }
     }
 
-
     public function GetEditNotice($id){
 
         require_once "clsConexion.php";
@@ -186,7 +237,7 @@ class Notice {
         $objCon =new Conexion();
 
         $sql="select titulo,small_photo, big_photo, content,DATE_FORMAT(CREATED,'%d')as dia,DATE_FORMAT(CREATED,'%M') as mes from news where id=".$id;
-       
+
         $resul=$objCon->Consultar($sql);
 
         if($reg=$resul->fetch())
@@ -199,7 +250,7 @@ class Notice {
             );
         }
 
-        return $retorno;
+        echo  json_encode($retorno);
     }
 
 }

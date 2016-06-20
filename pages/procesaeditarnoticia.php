@@ -34,12 +34,13 @@
 
     $titulo=$_POST['titulo'];
     $body=$_POST['body'];
-    echo '<br>'.$body.'<br>';
+    $id=base64_decode($_POST['id']);
+
     require '../Clases/clsNotice.php';
 
     $objNotice = new Notice();
 
-    if(!$objNotice->Add($titulo,$_FILES['imgp']['name'],$_FILES['imgg']['name'],$body))
+    if(!$objNotice->Edite($id,$titulo,$_FILES['imgp']['name'],$_FILES['imgg']['name'],$body))
     {
-        echo 'Error al guardar Noticia';
+        echo 'Error al editar Noticia';
     }

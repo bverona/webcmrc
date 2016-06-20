@@ -7,12 +7,16 @@
 
     $objNotice = new Notice();
 
-    //echo "----> ".$_POST['id'];
+    $objNotice->GetEditNotice($id);
 
-    if($data=$objNotice->GetEditNotice($id))
+    //echo ($data) ;
+
+    /*if($data=$objNotice->GetEditNotice($id))
     {
-        echo json_encode($data) ;
+
     }else
     {
-        $objNotice->GetNotice($id);
+       // $objNotice->GetEditNotice($id);
     }
+*/
+?>

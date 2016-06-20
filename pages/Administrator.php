@@ -55,8 +55,8 @@ if(empty($_SESSION['login']))
                             <div class="col-xs-1">
                                 <label class="title">Título</label>
                             </div>
-                            <div class="col-xs-11">
-                                <input type="text" name="titulo" id="titulo" class="form-control">
+                            <div class="col-xs-12 col-md-6">
+                                <input type="text" name="titulo" id="titulo"  class="form-control">
                             </div>
                         </p>
                     </div>

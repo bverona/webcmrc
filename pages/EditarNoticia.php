@@ -152,20 +152,20 @@ if(empty($_SESSION['login']) )
     function getNotice(id){
 
         var dataString = 'id='+id;
-        alert(dataString);
+
         $.ajax({
             type: "POST",
             url: "processeditnotice.php",
-            data: dataString,
-            success: function(data){
-              data=$.parseJSON(data);
-                alert(data.content);
-                $("#texto").html(data.content);
-                $("#titulo").val(data.titulo);
-                $("#imgp").html(data.small_photo);
-                $("#imgg").html(data.big_photo);
-                $("#rbtn").attr("hidden",false);
-            }
+            data: dataString
+        }).done(function(data){
+
+            data=$.parseJSON(data);
+
+            $("#texto").html(data.content);
+            $("#titulo").val(data.titulo);
+            $("#imgp").val(data.small_photo);
+            $("#imgg").html(data.big_photo);
+            $("#rbtn").attr("hidden",false);
         });
     }
 
@@ -224,14 +224,14 @@ $(function(){
         e.preventDefault();
         var f = $(this);
         var formData = new FormData(document.getElementById("procesa"));
-        //formData.append("dato", "valor");
+        formData.append("id","<?php echo ($_GET["id"]);?>" );
         //formData.append(f.attr("imgp"), $(this)[0].files[0]);
         //formData.append(f.attr("imgg"), $(this)[0].files[0]);
 
 
 
             $.ajax({
-                url: "procesa.php",
+                url: "procesaeditarnoticia.php",
                 type: "post",
                 dataType: "html",
                 data: formData,
@@ -240,10 +240,8 @@ $(function(){
                 processData: false
             })
                 .done(function (res) {
-                    $('#titulo').val('');
-                    $('#imgp').val('');
-                    $('#imgg').val('');
-                    $('#texto').val('');
+
+                    location.href="Gestionar.php"
 
                 });
 
