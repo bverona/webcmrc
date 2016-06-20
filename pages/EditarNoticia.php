@@ -160,10 +160,10 @@ if(empty($_SESSION['login']) )
             success: function(data){
               data=$.parseJSON(data);
                 alert(data.content);
-                $("#cuerpo").val(data.content);
+                $("#texto").html(data.content);
                 $("#titulo").val(data.titulo);
-                $("#imgp").val(data.small_photo);
-                $("#imgg").val(data.big_photo);
+                $("#imgp").html(data.small_photo);
+                $("#imgg").html(data.big_photo);
                 $("#rbtn").attr("hidden",false);
             }
         });
