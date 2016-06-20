@@ -1,0 +1,185 @@
+@media (max-width:1200px){
+.service{padding:70px 20px 50px}
+.welcome-img > img:last-child{right:100px}
+.team-info-box{margin:0 0 20px;padding:30px 40px}
+.team-info-box > ul{width:100%}
+.team-social{margin-top:20px;text-align:center;width:100%}
+.theme-layout.boxed{width:90%}
+}
+
+
+
+
+@media (max-width:980px){
+.column{float:left;width:100%;margin-bottom:50px;}
+.column:last-child{margin-bottom:0;}
+.responsive-header{display:block;}
+.theme-layout{padding:0!important}
+.service-detail{margin-top:10px;padding:0;text-align:center;width:100%;}
+.container.fancy > div > div:after,
+.container.fancy > div > div:before{display:none;}
+.service-detail{margin-top:10px;padding:0;text-align:center;width:100%;}
+.container.fancy > div > div::after, .container.fancy > div > div::before{display:none;}
+.practice-box, .practice-box.hor{float:left;margin:0 !important;width:50%;}
+.reviews-carousel{padding:0;}
+.team .row > div{float:left;width:50%;}
+.big-blog-text{float:left;padding:40px;position:relative;width:100%;}
+.big-blog-thumb strong{font-size:13px; padding:10px;}
+.story-img{float:left;position:relative;width:100%;}
+.story-detail{margin:0;}
+.flicker-photos > .row > div{float:left;width:33.334%;}
+.footer-widgets > .row > div{float:left;width:50%;}
+.contact-widget > span{float:none;width:auto;}
+.contact-widget .btn{display:block}
+.bottom-footer p{text-align:center;width:100%;}
+.bottom-footer ul{margin-top:10px;text-align:center;width:100%;}
+.bottom-footer ul li{display:inline-block;float:none;}
+.fancy-cols > div{float:left;width:100%}
+.service-sec .row > div{float:left;width:50%}
+.blog-grid .row > div{display:inline-block;margin:0 -2px;width:50%}
+.blog-grid{text-align:center}
+.welcome-img > img:last-child{right:100px}
+.welcome-img > img, .welcome-img > img:last-child, 
+.welcome-img:hover > img:first-child{animation:none !important;float:left;position:relative;right:auto;top:0;width:50%}
+.welcome-img{float:left;margin-top:50px;width:100%}
+.welcome-img{min-height:auto}	
+.welcome-area .row > div{display:unset;float:left;width:100%}
+.practice-img{width:100%}
+.practice-detail{margin:0;width:100%}
+.history-img{padding-right:30px;display:unset;float:left;width:100%}
+.history-scroll{display:unset;float:left;width:100%}
+.history-img > img{width:150px}
+.history-item{padding:30px}
+.pricing-table{text-align:center}
+.pricing-table .row > div{display:inline-block;margin:0 -2px;width:50%}
+.gallery > div{float:left;width:50%}
+.story-img > img{width:100%}
+.all-practice-areas .row > div{float:left;width:50%}
+.team-img{display:unset;float:left;text-align:center;width:100%}
+.team-description{display:unset;float:left;margin-top:30px;width:100%}
+.responsive-menu ul ul li{overflow:hidden;padding-left:30px}
+.topbar .top-info{background:#201f20;float:left;text-align:center;width:100%}
+.topbar .top-info .info{display:inline-block;float:none}
+.topbar .top-info .info:last-child{margin:0}
+.social-links{background:#171717;float:left;text-align:center;width:50%}
+.social-links > span{display:none}
+.social-links a{margin-right:5px}
+body.move{margin-left:-200px;}
+.menubar{display:none;}
+
+}
+
+
+
+
+@media (max-width:767px){
+.block .container{padding:0 15px;}
+.practice-areas{padding-left:0;}
+.parallax.png{display:none;}
+.service-box{border:0 none;display:inline-block;padding:30px;text-align:center;width:49%;}
+.services-wrapper{border:0 none;border-radius:0;display:unset;float:left;margin:0 !important;padding:0;text-align:center;width:100%;}
+.service-box i{width:100%;}
+.story-detail{padding:40px 30px;}
+.big-blog-thumb strong{position:relative;float:left;width:100%;background:black;
+    -webkit-transform:translate(0);
+    -moz-transform:translate(0);
+    -ms-transform:translate(0);
+    -o-transform:translate(0);
+    transform:translate(0);
+}
+.title h2,.title.simple > h2{font-size:32px}
+.title > p,.title.simple > p{font-size:13px;line-height:25px}
+.title.light > h2{font-size:27px;letter-spacing:0.7px;}
+.title.light > span{font-size:13px;}
+.addbar{padding:20px;width:100%;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	-ms-border-radius:6px;
+	-o-border-radius:6px;
+	border-radius:6px;
+}
+.addbar-wrapper{padding:0 15px}
+.boxed-layer::before{padding:0}
+.big-blog-text{padding:20px}
+.big-blog-wrap > h3{font-size:16px;line-height:22px}
+.big-blog-wrap > p{font-size:13px;line-height:26px}
+.signup > input, .signup > button{width:100%}
+.fancy-cols > div{padding:40px}
+.side-title > h2{font-size:32px}
+.side-title{margin-bottom:20px}
+.title br{float:left;}
+.white-wrapper{padding:40px 20px}
+.service-sec{padding:0 15px}
+.service-sec .row > div{width:100%}
+.fancy-parallax > span{font-size:16px}
+.fancy-parallax > h4{font-size:30px}
+.fancy-parallax > p{font-size:13px;margin-top:0}
+.fancy-parallax > a{margin-top:20px; padding:15px 30px}
+.fancy-parallax{margin-top:100px}
+.welcome-text > h3{font-size:35px;line-height:50px}
+.welcome-text > strong{font-size:18px}
+.welcome-text > p{line-height:28px;margin-top:10px}
+.welcome-text > a{margin-top:30px}
+.welcome-info > span{display:table;margin:0;text-align:center}
+.welcome-info > strong{font-size:20px}
+.welcome-info > strong i{font-size:30p}
+.pricing-table{padding:0}
+.pricing-table .row > div{margin:0;width:100%}
+.page-top-wrapper .container{display:unset;float:left;padding:0 20px;width:100%}
+.page-name{display:unset;float:left;width:100%}
+.page-name h1{font-size:28px;margin-bottom:5px}
+.page-name > span{font-size:12px}
+.breadcrumbs{display:unset;float:left;margin-top:20px;width:100%}
+.page-top > img{min-height:170px}
+.gallery-hover > h4{font-size:17px;padding-bottom:10px}
+.gallery-hover > span{font-size:13px;margin-top:10px}
+.all-practice-areas .row > div{width:100%}
+.blog-date{border-bottom:1px solid #aeaeae;border-right:0 none;margin:0;padding:10px 0;width:100%}
+.blog-text{float:left;margin-top:30px;width:100%}
+blockquote{padding:30px 20px}
+.contact > span{font-size:40px;margin-right:0;width:100%}
+.information{float:left;padding:0;text-align:center;width:100%}
+.information > strong{width:100%}
+.contact{margin-bottom:20px}
+.popup-inner {width:80%}
+.popup-title {padding:20px 30px}
+.popup-title > span {font-size:40px;margin-right: 20px}
+.popup-title > h5 { font-size: 18px;margin-bottom: 0;margin-top: 10px;}
+.popup-form {padding: 30px}
+.popup-form > h5 {font-size:18px}
+.post-author-box {padding:20px}
+.post-author-detail {float: left;width: 100%}
+.comments-section > ul > li ul {padding:0}
+br{float:left;}
+.video-slide iframe {min-height:auto}
+}
+
+
+
+
+
+@media (max-width:480px){
+.practice-box, .practice-box.hor,
+.team .row > div{width:100%}
+.service-box{width:100%}
+.lawyer-info{display:unset;float:left;padding:0;}
+.lawyer-intro > img{display:unset;margin-bottom:20px;}
+.reviewer-info{width:100%}
+.reviewer-name{margin-top:20px;padding:0;text-align:center;width:100%;}
+.reviewer-name > span{width:100%}
+.footer-widgets > .row > div{width:100%;}
+.blog-grid .row > div{display:inline-block;margin:0;width:100%}
+.history-item > img{width:100%}
+.welcome-img > img,.welcome-img > img:last-child{width:100%}
+.gallery > div{width:100%}
+.social-links{width:100%}
+.responsive-reg{width:100%;
+-webkit-transform:translate(0px);
+-moz-transform:translate(0px);
+-ms-transform:translate(0px);
+-o-transform:translate(0px);
+transform:translate(0px);
+}
+.responsive-bar > span{bottom:0;height:78px;top:auto}
+
+}
