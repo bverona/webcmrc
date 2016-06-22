@@ -7,16 +7,24 @@
 
     $objNotice = new Notice();
 
-    $objNotice->GetEditNotice($id);
+    echo $objNotice->GetEditNotice($id);
 
-    //echo ($data) ;
+/*
+    echo $arreglo."<br>";
 
+    $json= "{";
+
+    foreach($arreglo as $producto=>$valor)
+    {
+        $json.='"'.$producto.'" : '.$valor.',';
+    }
+
+    $json.="}";
+    echo ($json);
     /*if($data=$objNotice->GetEditNotice($id))
     {
-
     }else
     {
        // $objNotice->GetEditNotice($id);
     }
 */
-?>

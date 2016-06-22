@@ -14,25 +14,14 @@ if(empty($_SESSION['login']))
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 
-
-<!-- Styles -->
-<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="../css/revolution.css" media="screen" />
-<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="../css/style.css" type="text/css" />
-<link rel="stylesheet" href="../css/myStyle.css" type="text/css" />
-<link href="../css/responsive.css" rel="stylesheet" type="text/css" />
-
-<link rel="stylesheet" type="text/css" href="../css/color/color.css" title="color" />
-
-<!-- REVOLUTION STYLE SHEETS -->
-<link rel="stylesheet" type="text/css" href="../css/revolution/settings.css">
-<link rel="stylesheet" type="text/css" href="../css/revolution/layers.css">
-<link rel="stylesheet" type="text/css" href="../css/revolution/navigation.css">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/metisMenu.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/sb-admin-2.css" type="text/css"/>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" type="text/css"/>
 
 </head>
 <body>
-<div class="theme-layout">
+<div>
 <header>
 
 	    <?php
@@ -44,68 +33,89 @@ if(empty($_SESSION['login']))
 </header>
 <!-- Header -->
 
-<section>
-	<div class="block remove-gap">
-		<div class="container">
-
+<div id="wrapper">
+    <div id="page-wrapper">
+        <div class="row">
             <form enctype="multipart/form-data" id="procesa" method="post">
                 <div class="row">
                     <div class="col-xs-12 ">
                         <p class="text-center">
-                            <div class="col-xs-1">
-                                <label class="title">Título</label>
-                            </div>
-                            <div class="col-xs-12 col-md-6">
-                                <input type="text" name="titulo" id="titulo"  class="form-control">
-                            </div>
+                        <div class="col-xs-1">
+                            <label class="title">Título</label>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <input type="text" name="titulo" id="titulo"  class="form-control">
+                        </div>
                         </p>
                     </div>
                     <div class="col-xs-12 ">
-                        <h4><label class="title">Cuerpo
-                        <textarea name="body" class="form-control" rows="15" id="texto"></textarea></label></h4>
+                        <h4><label class="title">Cuerpo</label></h4>
+                            <textarea name="body" class="form-control"   rows="15" id="texto"></textarea>
                     </div>
                 </div>
-
                 <div class="row"><br/>
+                    <div class="col-xs-4 ">
+                        <div class="col-xs-3">
+                            <label class="title">Imagen Pequeña</label>
+                        </div>
+                        <div class="col-xs-9">
+                            <input type="file" name="imgp" id="imgp">
+                        </div>
+                    </div>
+                    <div class="col-xs-4 ">
+                        <div class="col-xs-3">
+                            <label class="title">Imagen Grande</label>
+                        </div>
+                        <div class="col-xs-9">
+                            <input type="file" name="imgg" id="imgg">
+                        </div>
+                    </div>
+                    <div class="col-sm-2-offset col-xs-4 col-sm-3 col-lg-2">
+                        <div class="form-group">
+                            <a data-toggle="modal" href="#Registar" id="btnregistrar" class="btn btn-success">Registrar</a>
+                        </div>
+                    </div>
+                    <div class="row"><br/>
                         <div class="col-xs-4 ">
-                            <div class="col-xs-3">
-                                <label class="title">Imagen Pequeña</label>
-                            </div>
-                            <div class="col-xs-9">
-                                <input type="file" name="imgp" id="imgp">
+                            <div class="col-xs-12">
+                                <img src="#" id="imagenp" name="imagenp"  alt="Imagen Pequeña" class="img-responsive"/>
                             </div>
                         </div>
                         <div class="col-xs-4 ">
-                            <div class="col-xs-3">
-                                <label class="title">Imagen Grande</label>
-                            </div>
-                            <div class="col-xs-9">
-                                <input type="file" name="imgg" id="imgg">
+                            <div class="col-xs-12">
+                                <img src="#" id="imageng" id="imageng" class="img-responsive" alt="Imagen Grande"/>
                             </div>
                         </div>
                         <div class="col-sm-2-offset col-xs-4 col-sm-3 col-lg-2">
-                        <div class="form-group">
-                            <input type="button" class="btn btn-block btn-success" value="Registrar" id="btnsend" data-toggle="modal" data-target=".bs-example-modal-sm"/>
+                            <div class="form-group">
+                                <img src="#" alt=""/>
+                            </div>
                         </div>
                     </div>
-                    </div>
-
+                </div>
             </form>
-
-		</div>
-	</div>
-</section>
-
-
-
-    <div id="myModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content" >
-               <p id="textoModal"></p>
-            </div>
         </div>
     </div>
+</div>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="Registar" style="margin-top: 10%; display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Registrar</h4>
+                </div>
+                <div class="modal-body">
+                    <h4 id="mensaje"></h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="btn btn-info" onclick="Limpiar()">Salir</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
     </div>
+
+</div>
 
 
 <div class="bottom-footer">
@@ -115,46 +125,13 @@ if(empty($_SESSION['login']))
 	</div>
 </div>
 
-
-</div>
-
-
-
-
-<!-- MAIN JQUERY AND MODERANIZER.JS -->
-<script type="text/javascript" src="../js/modernizr.custom.97074.js"></script>
 <script type="text/javascript" src="../js/jquery2.1.4.js"></script>
-
-
-<!-- REVOLUTION JS FILES -->
-<script type="text/javascript" src="../js/revolution/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src="../js/revolution/jquery.themepunch.revolution.min.js"></script>
-
-<!-- REVOLUTION JS EXTENITONS FILES -->
-<script type="text/javascript" src="../js/revolution/revolution.extension.actions.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.carousel.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.kenburn.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.layeranimation.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.migration.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.navigation.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.parallax.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.slideanims.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.video.min.js"></script>
-
-<!-- REVOLUTION JS INITIALIZATION -->
-<script type="text/javascript" src="../js/revolution/initialize.js"></script>
-
-<script type="text/javascript" src="../js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="../js/jquery.poptrox.min.js"></script>
-<script type="text/javascript" src="../js/jquery.scrolly.js"></script>
-<script src="../js/jquery.isotope.min.js"></script>
-<script src="../js/isotope-initialize.js"></script>
-<script src="../js/enscroll-0.5.2.min.js"></script> <!-- Custom Scroll bar -->
-<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="../js/metisMenu.js"></script>
+<script type="text/javascript" src="../js/sb-admin-2.js"></script>
+<script type="text/javascript" src="../js/Base64.js"></script>
+<script type="text/javascript" src="../js/dataTables.min.js"></script>
 
 <script type="text/javascript">
-
-
 function isImage(extension)
 {
     switch(extension.toLowerCase())
@@ -167,6 +144,9 @@ function isImage(extension)
             break;
     }
 }
+
+
+/*
 $(':file').change(function()
 {
     var fileExtension = "";
@@ -202,19 +182,100 @@ $(':file').change(function()
     }
 
 });
+*/
+
+function Mostrarp(input){
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $("#imagenp").attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+function Mostrarg(input){
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function (e) {
+            $("#imageng").attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+$('#imgp').change(function()
+{
+
+    var fileExtension = "";
+
+    //obtenemos un array con los datos del archivo
+    var file = $("#imgp")[0].files[0];
+    //obtenemos el nombre del archivo
+    var fileName = file.name;
+    //obtenemos la extensión del archivo
+    fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
+    //obtenemos el tamaño del archivo
+    var fileSize = file.size;
+    //obtenemos el tipo de archivo image/png ejemplo
+    var fileType = file.type;
+
+    if(!isImage(fileExtension)){
+        alert('Solo debe Seleccionar imágenes');
+        $("#imgp").val('');
+    }
+        Mostrarp(this);
+
+});
+
+$('#imgg').change(function()
+{
+    //obtenemos un array con los datos del archivo
+    var file = $("#imgg")[0].files[0];
+    //obtenemos el nombre del archivo
+    var fileName = file.name;
+    //obtenemos la extensión del archivo
+    fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
+    var fileType = file.type;
+    //mensaje con la información del archivo
+    if(!isImage(fileExtension)){
+        alert('Solo debe Seleccionar imágenes');
+        $("#imgp").val('');
+    }
+
+    Mostrarg(this);
+
+});
 
 $(function(){
 
-    $("#btnsend").on("click", function(e){
+
+    $("#btnregistrar").on("click", function(e){
+
         e.preventDefault();
-        var f = $(this);
         var formData = new FormData(document.getElementById("procesa"));
+
         //formData.append("dato", "valor");
+
         //formData.append(f.attr("imgp"), $(this)[0].files[0]);
         //formData.append(f.attr("imgg"), $(this)[0].files[0]);
+        var filep = $("#imgp")[0].files[0];
+        var fileg = $("#imgg")[0].files[0];
 
-
-
+        if($("#titulo").val()===""){
+            $("#mensaje").html("Ingrese título");
+            $("#titulo").focus();
+        }else if (typeof($("#contenido").html())==="undefined"){
+            $("#mensaje").html("Ingrese contenido de noticia");
+        }else if (typeof(filep)==="undefined"){
+            $("#mensaje").html("Seleccione la Imagen Pequeña");
+            $("#imgp").focus();
+        }else if(typeof(fileg)==="undefined")
+        {
+            $("#mensaje").html("Seleccione la Imagen Grande");
+            $("#imgg").focus();
+        }else
+        {
             $.ajax({
                 url: "procesa.php",
                 type: "post",
@@ -222,26 +283,29 @@ $(function(){
                 data: formData,
                 cache: false,
                 contentType: false,
-                processData: false
+                processData: false,
+                beforeSend:function(){
+                    $("#mensaje").html("Enviando datos...");
+                }
             })
                 .done(function (res) {
                     $('#titulo').val('');
                     $('#imgp').val('');
                     $('#imgg').val('');
                     $('#texto').val('');
-
+                    $("#mensaje").val(res);
                 });
-
-
-
+         }
 
     });
 
 
-
-
-
 });
+
+    function Limpiar(){
+        $("#mensaje").html("");
+    }
+
 </script>
 
 </body>

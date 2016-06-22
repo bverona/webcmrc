@@ -1,7 +1,6 @@
 <?php
 session_start();
-$id = base64_decode($_GET["id"]);
-if(empty($_SESSION['login']) )
+if(empty($_SESSION['login']))
 {
     header('Location: index.php');
 }
@@ -15,26 +14,16 @@ if(empty($_SESSION['login']) )
 <meta name="description" content="" />
 <meta name="keywords" content="" />
 
-
-<!-- Styles -->
-<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="../css/revolution.css" media="screen" />
-<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="../css/style.css" type="text/css" />
-<link rel="stylesheet" href="../css/myStyle.css" type="text/css" />
-<link href="../css/responsive.css" rel="stylesheet" type="text/css" />
-
-<link rel="stylesheet" type="text/css" href="../css/color/color.css" title="color" />
-
-<!-- REVOLUTION STYLE SHEETS -->
-<link rel="stylesheet" type="text/css" href="../css/revolution/settings.css">
-<link rel="stylesheet" type="text/css" href="../css/revolution/layers.css">
-<link rel="stylesheet" type="text/css" href="../css/revolution/navigation.css">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/metisMenu.css" type="text/css"/>
+    <link rel="stylesheet" href="../css/sb-admin-2.css" type="text/css"/>
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" type="text/css"/>
 
 </head>
 <body>
-<div class="theme-layout">
+<div>
 <header>
+
 	    <?php
             require_once '../Clases/clsNavBar.php';
             $objNav = new NavBar();
@@ -44,102 +33,104 @@ if(empty($_SESSION['login']) )
 </header>
 <!-- Header -->
 
-<section>
-	<div class="block remove-gap">
-		<div class="container">
-
+<div id="wrapper">
+    <div id="page-wrapper">
+        <div class="row">
             <form enctype="multipart/form-data" id="procesa" method="post">
                 <div class="row">
                     <div class="col-xs-12 ">
                         <p class="text-center">
-                            <div class="col-xs-1">
-                                <label class="title">Título</label>
-                            </div>
-                            <div class="col-xs-11">
-                                <input type="text" name="titulo" id="titulo" class="form-control">
-                            </div>
+                        <div class="col-xs-1">
+                            <label class="title">Título</label>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <input type="text" name="titulo" id="titulo"  class="form-control">
+                        </div>
                         </p>
                     </div>
                     <div class="col-xs-12 ">
-                        <h4><label class="title">Cuerpo
-                        <textarea name="body" class="form-control" rows="15" id="texto"></textarea></label></h4>
+                        <h4><label class="title">Cuerpo</label></h4>
+                            <textarea name="body" class="form-control"   rows="15" id="texto"></textarea>
                     </div>
                 </div>
 
                 <div class="row"><br/>
-                        <div class="col-xs-4 ">
-                            <div class="col-xs-3">
-                                <label class="title">Imagen Pequeña</label>
-                            </div>
-                            <div class="col-xs-9">
-                                <input type="file" name="imgp" id="imgp">
-                            </div>
+                    <div class="col-xs-4 ">
+                        <div class="col-xs-3">
+                            <label class="title">Imagen Pequeña</label>
                         </div>
-                        <div class="col-xs-4 ">
-                            <div class="col-xs-3">
-                                <label class="title">Imagen Grande</label>
-                            </div>
-                            <div class="col-xs-9">
-                                <input type="file" name="imgg" id="imgg">
-                            </div>
+                        <div class="col-xs-9">
+                            <input type="file" name="imgp" id="imgp" accept="image/jpeg, image/png">
                         </div>
-                        <div class="col-sm-2-offset col-xs-4 col-sm-3 col-lg-2">
+                    </div>
+                    <div class="col-xs-4 ">
+                        <div class="col-xs-3">
+                            <label class="title">Imagen Grande</label>
+                        </div>
+                        <div class="col-xs-9">
+                            <input type="file" name="imgg" id="imgg" accept="image/jpeg, image/png">
+                        </div>
+                    </div>
+                    <div class="col-sm-2-offset col-xs-4 col-sm-3 col-lg-2">
                         <div class="form-group">
-                            <input type="button" class="btn btn-block btn-success" value="Registrar" id="btnsend" data-toggle="modal" data-target=".bs-example-modal-sm"/>
+                            <a data-toggle="modal" href="#Registar" id="btnsend" onclick="Enviar()" class="btn btn-success">Enviar</a>
                         </div>
                     </div>
+                </div>
+
+                <div class="row"><br/>
+                    <div class="col-xs-4 ">
+                        <div class="col-xs-12">
+                            <img src="#" id="imagenp" name="imagenp"  alt="Imagen Pequeña" class="img-responsive"/>
+                        </div>
                     </div>
-
+                    <div class="col-xs-4 ">
+                        <div class="col-xs-12">
+                            <img src="#" id="imageng" id="imageng" class="img-responsive" alt="Imagen Grande"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-2-offset col-xs-4 col-sm-3 col-lg-2">
+                        <div class="form-group">
+                            <img src="#" alt=""/>
+                        </div>
+                    </div>
+                </div>
             </form>
+        </div>
+    </div>
+</div>
 
-		</div>
-	</div>
-</section>
+    <div class="modal fade" tabindex="-1" role="dialog" id="Registar" style="margin-top: 10%; display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Registrar</h4>
+                </div>
+                <div class="modal-body">
+                    <h4 id="mensaje">Enviando...</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="btn btn-info" >Salir</a>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+
+</div>
+
 
 <div class="bottom-footer">
 	<div class="container">
 		<p>Copyright 2016, IEPM "Gran Mariscal Ramón Castilla" - Av. Ramón Castilla 425 - 427 - Teléfono 044 - 464021 Telefax: 044 - 464116. - Trujillo - Perú. All Rights Reserved.</p>
-
 	</div>
 </div>
 
-
-</div>
-
-
-
-
-<!-- MAIN JQUERY AND MODERANIZER.JS -->
-<script type="text/javascript" src="../js/modernizr.custom.97074.js"></script>
 <script type="text/javascript" src="../js/jquery2.1.4.js"></script>
-
-
-<!-- REVOLUTION JS FILES -->
-<script type="text/javascript" src="../js/revolution/jquery.themepunch.tools.min.js"></script>
-<script type="text/javascript" src="../js/revolution/jquery.themepunch.revolution.min.js"></script>
-
-<!-- REVOLUTION JS EXTENITONS FILES -->
-<script type="text/javascript" src="../js/revolution/revolution.extension.actions.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.carousel.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.kenburn.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.layeranimation.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.migration.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.navigation.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.parallax.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.slideanims.min.js"></script>
-<script type="text/javascript" src="../js/revolution/revolution.extension.video.min.js"></script>
-
-<!-- REVOLUTION JS INITIALIZATION -->
-<script type="text/javascript" src="../js/revolution/initialize.js"></script>
-
-<script type="text/javascript" src="../js/owl.carousel.min.js"></script>
-<script type="text/javascript" src="../js/jquery.poptrox.min.js"></script>
-<script type="text/javascript" src="../js/jquery.scrolly.js"></script>
-<script src="../js/jquery.isotope.min.js"></script>
-<script src="../js/isotope-initialize.js"></script>
-<script src="../js/enscroll-0.5.2.min.js"></script> <!-- Custom Scroll bar -->
-<script type="text/javascript" src="../js/script.js"></script>
-<script type="text/javascript" src="../js/util.js"></script>
+<script type="text/javascript" src="../js/metisMenu.js"></script>
+<script type="text/javascript" src="../js/sb-admin-2.js"></script>
+<script type="text/javascript" src="../js/Base64.js"></script>
+<script type="text/javascript" src="../js/dataTables.min.js"></script>
 
 <script type="text/javascript">
 
@@ -149,112 +140,139 @@ if(empty($_SESSION['login']) )
 
     });
 
+    function mostrarImagen(input) {
+
+    }
+    $("#imgp").change(function(){
+
+    });
     function getNotice(id){
-
         var dataString = 'id='+id;
-
         $.ajax({
             type: "POST",
             url: "processeditnotice.php",
-            data: dataString
-        }).done(function(data){
+            data: dataString,
+            success:function(data){
+                var obj=data.split(",");
+                /*
+                 var str="";
+                 for (var p in obj) {
+                 if (obj.hasOwnProperty(p)) {
+                 str += p + '::' + obj[p] + '\n';
+                 }
+                 };
+                 */
+                $("#titulo").val(obj[0]);
+                $("#imagenp").attr("src",obj[1]);
+                $("#imageng").attr("src",obj[2]);
+                $("#texto").html(obj[3]);
+            }
+        });
+    }
+    function isImage(extension)
+    {
+        switch(extension.toLowerCase())
+        {
+            case 'jpg': case 'gif': case 'png': case 'jpeg':
+            return true;
+            break;
+            default:
+                return false;
+                break;
+        }
+    }
+    function Mostrarp(input){
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $("#imagenp").attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
 
-            data=$.parseJSON(data);
+    function Mostrarg(input){
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $("#imageng").attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $('#imgp').change(function()
+    {
+        var fileExtension = "";
 
-            $("#texto").html(data.content);
-            $("#titulo").val(data.titulo);
-            $("#imgp").val(data.small_photo);
-            $("#imgg").html(data.big_photo);
-            $("#rbtn").attr("hidden",false);
+        //obtenemos un array con los datos del archivo
+        var file = $("#imgp")[0].files[0];
+        //obtenemos el nombre del archivo
+        var fileName = file.name;
+        //obtenemos la extensión del archivo
+        fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
+        //obtenemos el tamaño del archivo
+        var fileSize = file.size;
+        //obtenemos el tipo de archivo image/png ejemplo
+        var fileType = file.type;
+
+
+
+        if(!isImage(fileExtension)){
+            alert('Solo debe Seleccionar imágenes');
+            $("#imgp").val('');
+        }else{
+
+            Mostrarp(this);
+        }
+    });
+
+    $('#imgg').change(function()
+    {
+
+
+        //obtenemos un array con los datos del archivo
+        var file = $("#imgg")[0].files[0];
+        //obtenemos el nombre del archivo
+        var fileName = file.name;
+        //obtenemos la extensión del archivo
+        fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
+        //obtenemos el tamaño del archivo
+        var fileSize = file.size;
+        //obtenemos el tipo de archivo image/png ejemplo
+        var fileType = file.type;
+
+        if(!isImage(fileExtension)){
+            alert('Solo debe Seleccionar imágenes');
+            $("#imgg").val('');
+        }else{
+
+            Mostrarg(this);
+
+        }
+    });
+
+    function Enviar(){
+        var formData = new FormData(document.getElementById("procesa"));
+        formData.append("id","<?php echo ($_GET["id"]);?>" );
+        $.ajax({
+            url: "procesaeditarnoticia.php",
+            type: "post",
+            dataType: "html",
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false
+        }).done(function (res) {
+            $("#mensaje").val("Enviado!");
+            setTimeout(function(){location.href="Gestionar.php";},2000);
         });
     }
 
-
-function isImage(extension)
-{
-    switch(extension.toLowerCase())
-    {
-        case 'jpg': case 'gif': case 'png': case 'jpeg':
-        return true;
-        break;
-        default:
-            return false;
-            break;
-    }
-}
-$(':file').change(function()
-{
-    var fileExtension = "";
-
-    //obtenemos un array con los datos del archivo
-    var file = $("#imgp")[0].files[0];
-    //obtenemos el nombre del archivo
-    var fileName = file.name;
-    //obtenemos la extensión del archivo
-    fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
-    //obtenemos el tamaño del archivo
-    var fileSize = file.size;
-    //obtenemos el tipo de archivo image/png ejemplo
-    var fileType = file.type;
-
-    if(!isImage(fileExtension)){
-        alert('Solo debe Seleccionar imágenes');
-        $("#imgp").val('');
-    }
-
-    //obtenemos un array con los datos del archivo
-    var file = $("#imgg")[0].files[0];
-    //obtenemos el nombre del archivo
-    var fileName = file.name;
-    //obtenemos la extensión del archivo
-    fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
-    var fileType = file.type;
-    //mensaje con la información del archivo
-
-    if(!isImage(fileExtension)){
-        alert('Solo debe Seleccionar imágenes');
-        $("#imgg").val('');
-    }
-
-});
-
-$(function(){
-
-    $("#btnsend").on("click", function(e){
-        e.preventDefault();
-        var f = $(this);
-        var formData = new FormData(document.getElementById("procesa"));
-        formData.append("id","<?php echo ($_GET["id"]);?>" );
-        //formData.append(f.attr("imgp"), $(this)[0].files[0]);
-        //formData.append(f.attr("imgg"), $(this)[0].files[0]);
-
-
-
-            $.ajax({
-                url: "procesaeditarnoticia.php",
-                type: "post",
-                dataType: "html",
-                data: formData,
-                cache: false,
-                contentType: false,
-                processData: false
-            })
-                .done(function (res) {
-
-                    location.href="Gestionar.php"
-
-                });
-
-
-
+    $("#btnenviar").on("click", function(e){
+            e.preventDefault();
 
     });
 
-
-
-
-
-});
 </script>
 
 </body>

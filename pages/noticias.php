@@ -1,8 +1,10 @@
 <?php
 
 session_start();
-$_SESSION['login']='';
-session_destroy();
+if(empty($_SESSION['login']))
+{
+    session_destroy();
+}
 
 ?>
 <!DOCTYPE html>
@@ -36,13 +38,13 @@ session_destroy();
 <header>
 
     <?php
-    require_once '../Clases/clsNavBar.php';
-    $objNav = new NavBar();
-    echo $objNav->getNavbar();
+        require_once '../Clases/clsNavBar.php';
+        $objNav = new NavBar();
+        echo $objNav->getNavbar();
     ?>
 
 </header>
-    <!-- Header -->
+<!-- Header -->
 
 
 <div class="container" style="margin-top: 10%; margin-bottom: 5%;">
@@ -61,11 +63,6 @@ session_destroy();
                             ?>
                         </div>
 					</div>
-                    <!--
-                    <div class="row" hidden="false" id="rbtn">
-                        <button class="btn btn-lg btn-block btn-success" target="_aboutblank" onclick="refresca();" >Regresar a Noticias</button>
-                    </div>
-                    -->
 				</div>
 			</div>
 		</div>

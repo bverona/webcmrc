@@ -35,6 +35,27 @@ class Notice {
 
         $sql="update news set titulo='".$title."'".",small_photo='".$imgp."'".",big_photo='".$imgg."'".",content='".$body."' where id=".$id;
 
+
+
+        $reg=$objCon->Consultar($sql);
+
+        if($reg!=null)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+
+    }
+
+    public function Edite2($id,$title,$imgp,$body){
+
+        require_once "clsConexion.php";
+        $objCon =new Conexion();
+
+        $sql="update news set titulo='".$title."'".",small_photo='".$imgp."'".",content='".$body."' where id=".$id;
+
         echo $sql;
 
         $reg=$objCon->Consultar($sql);
@@ -49,6 +70,43 @@ class Notice {
 
     }
 
+    public function Edite3($id,$title,$imgg,$body){
+
+        require_once "clsConexion.php";
+        $objCon =new Conexion();
+
+        $sql="update news set titulo='".$title."'".",big_photo='".$imgg."'".",content='".$body."' where id=".$id;
+
+        $reg=$objCon->Consultar($sql);
+
+        if($reg!=null)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+
+    }
+
+    public function Edite4($id,$title,$body){
+
+        require_once "clsConexion.php";
+        $objCon =new Conexion();
+
+        $sql="update news set titulo='".$title."'".",content='".$body."' where id=".$id;
+
+        $reg=$objCon->Consultar($sql);
+
+        if($reg!=null)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+
+    }
     public function Delete($id){
 
         require_once "clsConexion.php";
@@ -239,18 +297,24 @@ class Notice {
         $sql="select titulo,small_photo, big_photo, content,DATE_FORMAT(CREATED,'%d')as dia,DATE_FORMAT(CREATED,'%M') as mes from news where id=".$id;
 
         $resul=$objCon->Consultar($sql);
+        $reg=$resul->fetch();
 
-        if($reg=$resul->fetch())
-        {
-            $retorno=array(
-                "titulo"=>$reg["titulo"],
-                "small_photo"=>$reg["small_photo"],
-                "big_photo"=>$reg["big_photo"],
-                "content"=>$reg["content"],
-            );
-        }
+        $retorno="";
+        /* $retorno=array(
+            $reg["titulo"],
+            $reg["small_photo"],
+            $reg["big_photo"],
+            $reg["content"],
+        );*/
 
-        echo  json_encode($retorno);
+        $retorno.=$reg["titulo"].",";
+        $retorno.="../images/".$reg["small_photo"].",";
+        $retorno.="../images/".$reg["big_photo"].",";
+        $retorno.=$reg["content"]."";
+
+        return ($retorno);
+      //return $aux;
+
     }
 
 }

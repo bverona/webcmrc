@@ -1,36 +1,7 @@
 <?php
 
-
-    //Registrar Imágenes
-    if ($_FILES['imgp']["error"] > 0 && $_FILES['imgp']["size"] > 0)
-    {
-        echo "Error al subir imagen pequeña <br>";
-    }
-    elseif ($_FILES['imgg']["error"] > 0  && $_FILES['imgg']["size"] > 0)
-    {
-        echo "Error al subir imagen grande <br>";
-    }
-    else
-    {
-        $target_path = "../images/";
-        $fotop = $target_path . ( $_FILES['imgp']['name']);
-        $fotog = $target_path . ( $_FILES['imgg']['name']);
-
-        if(move_uploaded_file($_FILES['imgp']['tmp_name'], $fotop))
-        {
-            if(move_uploaded_file($_FILES['imgg']['tmp_name'], $fotog))
-            {
-                #header('location: notice.php');
-            }
-            else
-            {
-                echo "Ha ocurrido un error al subir foto grande";
-            }
-        }else
-        {
-            echo "Ha ocurrido un error al subir foto pequeña";
-        }
-    }
+    $imgp=0;
+    $imgg=0;
 
     $titulo=$_POST['titulo'];
     $body=$_POST['body'];
@@ -40,7 +11,41 @@
 
     $objNotice = new Notice();
 
-    if(!$objNotice->Edite($id,$titulo,$_FILES['imgp']['name'],$_FILES['imgg']['name'],$body))
+
+    //Registrar Imágenes
+    if ( $_FILES['imgp']["size"] > 0)//no subió
     {
-        echo 'Error al editar Noticia';
+        $imgp=1;
+        echo "imgp".$imgp."<br>";
+    }
+    if ($_FILES['imgg']["size"] > 0)//no subió
+    {
+        $imgg=1;
+        echo "imgg".$imgg."<br>";
+    }
+
+    $target_path = "../images/";
+    $fotop = $target_path . ( $_FILES['imgp']['name']);
+    $fotog = $target_path . ( $_FILES['imgg']['name']);
+
+    if($imgp!=0 && $imgg==0)//solo pequeña
+    {
+        move_uploaded_file($_FILES['imgp']['tmp_name'], $fotop);
+        $objNotice->Edite2($id,$titulo,$_FILES['imgp']['name'],$body);
+            echo "Edite2";
+
+    }elseif($imgg!=0 && $imgp==0)//solo grande
+    {
+        move_uploaded_file($_FILES['imgg']['tmp_name'], $fotog);
+        $objNotice->Edite3($id,$titulo,$_FILES['imgg']['name'],$body);
+        echo "Edite3";
+    }elseif($imgg==0 && $imgp==0)//ninguna
+    {
+        $objNotice->Edite4($id,$titulo,$body);
+        echo "Edite4";
+    }else{//las dos
+        echo "Edite";
+        $objNotice->Edite($id,$titulo,$_FILES['imgp']['name'],$_FILES['imgg']['name'],$body);
+        move_uploaded_file($_FILES['imgp']['tmp_name'], $fotop);
+        move_uploaded_file($_FILES['imgg']['tmp_name'], $fotog);
     }

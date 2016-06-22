@@ -65,12 +65,12 @@ ul li,
 ol li{
     font-family:arimo;
     color:#454545;
-}/*
+}
 a:hover,
 a:focus{
     text-decoration:none;
     outline:none;
-}*/
+}
 .theme-layout{
     float:left;
     overflow:hidden;
@@ -172,8 +172,8 @@ iframe{
     float:left;
 }
 a:hover,
-/* a:focus{color:unset;}
-/*=============== Cross Browser Compatibility ===================
+a:focus{color:unset;}
+/*=============== Cross Browser Compatibility ===================*/
 .social-links a,
 nav > ul > li > a,
 .registration-btns > a i:after,
@@ -207,27 +207,27 @@ nav > ul > li ul li,
 .responsive-menu ul li a,
 .logo img,
 nav > ul > li,
-nav > ul > li > a*//*,
+nav > ul > li > a,
 .tagcloud > a{
     -webkit-transition:all 0.25s linear;
     -moz-transition:all 0.25s linear;
     -ms-transition:all 0.25s linear;
     -o-transition:all 0.25s linear;
     transition:all 0.25s linear;
-}*/
-    /*
-    .registration-btns > a i:after,
-    .history-info > img,
-    .service > span,
-    .service > span:before,
-    .service > span:after{
-        -webkit-border-radius:50%;
-        -moz-border-radius:50%;
-        -ms-border-radius:50%;
-        -o-border-radius:50%;
-        border-radius:50%;
-    }
-    =============== Header ===================*/
+}
+
+.registration-btns > a i:after,
+.history-info > img,
+.service > span,
+.service > span:before,
+.service > span:after{
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    border-radius:50%;
+}
+/*=============== Header ===================*/
 header{
     float:left;
     position:relative;
@@ -330,7 +330,6 @@ nav > ul > li a{
     position:relative;
 }
 nav > ul > li:hover a{color:transparent;} 
-/*
 nav > ul > li > a:before{
     font-weight: bold;
     color:#558b2f;
@@ -347,20 +346,18 @@ nav > ul > li > a:before{
     -o-transform:translateY(30px);
     transform:translateY(30px);
 
-    -webkit-transition:all 1000ms cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit *//*
+    -webkit-transition:all 1000ms cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
     -webkit-transition:all 1000ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
        -moz-transition:all 1000ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
          -o-transition:all 1000ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
             transition:all 1000ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
-/*
-    -webkit-transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1); *//* older webkit *//*
+
+    -webkit-transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1); /* older webkit */
     -webkit-transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
        -moz-transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
          -o-transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
             transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
-}*/
-
-/*
+}
 nav > ul > li:hover > a:before{
     opacity:1;
     -webkit-transform:translateY(0);
@@ -369,7 +366,6 @@ nav > ul > li:hover > a:before{
     -o-transform:translateY(0);
     transform:translateY(0);
 }
-*/
 .registration-btns{
     display:table-cell;
     text-align:center;
@@ -3159,8 +3155,10 @@ aside.sidebar .widget li::before {
     font-family:roboto slab;
     font-size:11px;
     font-weight:600;
+    margin-top:20px;
+    padding:15px 29px;
     text-transform:uppercase;
-    border-radius:10;
+    border-radius:0;
 }
 .btn:hover{color:#FFF}
 .bottom-footer{

@@ -34,12 +34,14 @@
 
     $titulo=$_POST['titulo'];
     $body=$_POST['body'];
-    echo '<br>'.$body.'<br>';
+
     require '../Clases/clsNotice.php';
 
     $objNotice = new Notice();
 
-    if(!$objNotice->Add($titulo,$_FILES['imgp']['name'],$_FILES['imgg']['name'],$body))
+    if($objNotice->Add($titulo,$_FILES['imgp']['name'],$_FILES['imgg']['name'],$body))
     {
-        echo 'Error al guardar Noticia';
+        echo "Registrado!";
     }
+
+

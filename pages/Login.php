@@ -50,18 +50,18 @@ session_destroy();
             <div class="cover-container" id="box">
                 <form action="Logueo.php">
                     <div class="row">
-                        <div class="col-xs-12 col-md-offset-3 col-md-4">
+                        <div class="col-xs-12 col-sm-offset-4 col-sm-4">
                             <input class="form-control" type="text" name="user" placeholder="Usuario" id="username" />
                         </div>
                     </div>
                     <div class="row">
                         <br/>
-                        <div class="col-xs-12 col-md-offset-3 col-md-4">
+                        <div class="col-xs-12 col-sm-offset-4 col-sm-4">
                             <input class="form-control" name="pass" type="password" placeholder="Contraseña" id="pass"/>
                         </div>
                     </div>
                     <div class="row"><br/>
-                        <div class="col-xs-12 col-md-offset-3 col-md-4">
+                        <div class="col-xs-12 col-sm-offset-4 col-sm-4">
                             <input class="btn btn-success btn-block" type="button" id="login" value="Ingresar"/>
                         </div>
                     </div>
@@ -72,8 +72,8 @@ session_destroy();
 
     </div>
 
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
 
 

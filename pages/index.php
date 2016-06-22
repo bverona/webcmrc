@@ -34,19 +34,17 @@ session_destroy();
 <body>
 <div class="theme-layout">
 <header>
-
 	    <?php
             require_once '../Clases/clsNavBar.php';
             $objNav = new NavBar();
             echo $objNav->getNavbar();
         ?>
-
 </header>
 <!-- Header -->
 
 <section>
 	<div class="block no-padding">
-		<div class="">
+		<div class="fa fa-adjust">
 			<div class="row">
 				<div class="col-md-12">
 					<div id="rev_slider_116_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="layer-animations" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
@@ -109,23 +107,7 @@ session_destroy();
 										data-responsive_offset="on" 
 										style="font-size:15px; letter-spacing:0.3px; line-height:32px;">Educación bajo sólidos principios morales y servicio militar no acuartelado.
 									</div>
-									<!-- LAYER NR. 4 -->
-									<!--<a href="#" class="tp-caption layer4 tp-resizeme rs-parallaxlevel-9" 
-										id="slide1-layer4" 
-										data-x="700" data-hoffset="" 
-										data-y="410" data-voffset="" 
-										data-width="['auto','auto','auto','auto']"
-										data-height="['auto','auto','auto','auto']"
-										data-transform_idle="o:1;"
-										data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" 
-										data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
-										data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-										data-start="3300" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="font-size:13px; padding:20px 40px; letter-spacing:0.4px;">NEED LEGAL ASSISTANCE
-									</a>-->
+
 								</li>
 								<li data-index="slide1" data-transition="parallaxhorizontal" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/slider2.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide 2" data-description="">
 									<img src="../images/slider2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina />
@@ -200,23 +182,6 @@ session_destroy();
 										data-responsive_offset="on" 
 										style="text-align:center; font-size:15px; letter-spacing:0.3px; line-height:32px;">
 									</div>
-									<!-- LAYER NR. 4 -->
-									<!--<a href="#" class="tp-caption layer4 tp-resizeme rs-parallaxlevel-9" 
-										id="slide2-layer5" 
-										data-x="center" data-hoffset="" 
-										data-y="410" data-voffset="" 
-										data-width="['auto','auto','auto','auto']"
-										data-height="['auto','auto','auto','auto']"
-										data-transform_idle="o:1;"
-										data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" 
-										data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
-										data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-										data-start="3300" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="font-size:13px; padding:20px 40px; letter-spacing:0.4px;">NEED LEGAL ASSISTANCE
-									</a>-->
 								</li>
 								<!-- SLIDE  -->
 							</ul>
@@ -245,10 +210,6 @@ session_destroy();
 									En su calidad de Colegio Militar, imparte una formación integral que fusiona la instrucción académica de nivel secundario, con la de carácter castrense que inculca orden, disciplina y responsabilidad; orientada siempre hacia la práctica de los valores morales y sociales.
 									Actualmente esta Institución Educativa esta orientada a ofrecer a la juventud un servicio de renovada calidad, que garantiza alcanzar los ideales de superación que animan a sus estudiantes y justifica plenamente la confianza que en ella depositan los padres de familia, y ello nos compromete a entregar lo mejor de nuestra experiencia personal y profesional para el logro de los objetivos institucionales y el cumplimiento de nuestro sagrado lema: DISCIPLINA, MORALIDAD Y TRABAJO.</p>
 					 				<a href="#" title="">JOSE MARTIN YALE AVILA - DIRECTOR I.E.P.M. “GRAN MARISCAL RAMON CASTILLA”</a>
-					 				<!--<div class="welcome-info">
-					 					<span>(888) 123-456-7890</span>
-					 					<strong><i>24/7</i> Available</strong>
-					 				</div>-->
 					 			</div>
 					 		</div>
 					 		<div class="col-md-6">
@@ -264,95 +225,6 @@ session_destroy();
 		</div>
 	</div>
 </section>
-
-<!--<section class="section_matricula">
-	<div class="block remove-gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="service-sec style2">
-						<div class="title_service">
-							<h1>Matrículas 2016</h1>
-						</div>
-						<div class="row">
-							<div class="col-md-4">
-								<div class="service">
-									<span><i class="fa fa-pencil-square-o"></i></span>
-									<h4><a title="" href="#">TERCER AÑO</a></h4>
-									<p>CUOTA DE INCORPORACIÓN S/. 2.300,00</p>
-									<p>PENSION ALIMENTICIA MARZO S/. 280,00</p>
-									<h4><a title="" href="#">S/. 2.580,00</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<span><i class="fa fa-pencil-square-o"></i></span>
-									<h4><a title="" href="#">CUARTO AÑO</a></h4>
-									<p>CUOTA DE INCORPORACION S/. 1400,00</p>
-									<p>PENSION ALIMENTICIA MARZO S/. 280,00</p>
-									<h4><a title="" href="#">S/. 1.680,00</a></h4>
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="service">
-									<span><i class="fa fa-pencil-square-o"></i></span>
-									<h4><a title="" href="#">QUINTO AÑO</a></h4>
-									<p>CUOTA DE INCORPORACION S/. 1300,00</p>
-									<p>PENSION ALIMENTICIA MARZO S/. 280,00</p>
-									<h4><a title="" href="#">S/. 1.580,00</a></h4>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>-->
-
-<!--<section>
-	<div class="block blackish">
-	<div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url(http://placehold.it/1920x900) no-repeat 50% 0;"></div>
-		<div class="container fancy">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="fun-facts">
-						<div class="row">
-							<div class="col-md-3">
-								<div class="fact">
-									<img src="images/fact1.png" alt="" />
-									<span>700+</span>
-									<i>HAPPY CLIENTS</i>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="fact">
-									<img src="images/fact1.png" alt="" />
-									<span>89%</span>
-									<i>CASES SUCCESS</i>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="fact">
-									<img src="images/fact1.png" alt="" />
-									<span>$339K</span>
-									<i>RECOVERED</i>
-								</div>
-							</div>
-							<div class="col-md-3">
-								<div class="fact">
-									<img src="images/fact1.png" alt="" />
-									<span>289+</span>
-									<i>CASES DONE</i>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>-->
 
 <section>
 	<div class="block">
@@ -460,56 +332,6 @@ session_destroy();
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7900.1718810786!2d-79.08585816100343!3d-8.092718372887788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3c3fb3b141e3%3A0xabcdff834d4deeaa!2sColegio+Militar+Gran+Mariscal+Ram%C3%B3n+Castilla!5e0!3m2!1ses!2spe!4v1464641051540" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </section>
 
-<!--<section>
-	<div class="block blackish">
-	<div class="parallax" data-velocity="-.1" style="background: rgba(0, 0, 0, 0) url(images/mivi.jpg) no-repeat 50% 0;"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="title light">
-						<span>Want To Know About Customers Thinking</span>
-						<h2>CUSTOMER <span>REVIEWS</span></h2>
-					</div>
-
-					<div class="reviews-carousel">
-						<div class="review">
-							<p>Duis convallis turpisnisi fringilla. Phasellus ornare euismod varius nullam. Vivamus sagittis et nunc ut aliquet. Vivamus porta ligulain orci aliquam, ac vulputate leo vehicula. Mauris porttitor eroshicula. Donec eget ultricies ipsmconsequat rhoncus elit. Antegr sollicitudin ligula nonenim sodales, commodo tem ibus  ac vulputate leo vehicula.</p>
-							<div class="reviewer-info">
-								<img src="http://placehold.it/112x112" alt="" />
-								<div class="reviewer-name">
-									<strong>Dave Softel</strong>
-									<span>Happy Buyer of April</span>
-								</div>
-							</div>
-						</div>
-						<div class="review">
-							<p> Duis convallis turpisnisi fringilla. Phasellus ornare euismod. Vestibulum at magna tellus. Vivamus sagittis et nunc ut aliquet. Vivamus porta ligulain orci aliquam, ac vulputate leo vehicula. Mauris porttitor eroshicula. Donec eget ultricies ipsmconsequat rhoncus elit. Duis convallis turpisnisi fringilla ac vulputate leo vehicula. Phasellus ornare euismod varius nullam.</p>
-							<div class="reviewer-info">
-								<img src="http://placehold.it/112x112" alt="" />
-								<div class="reviewer-name">
-									<strong>Mark Moxren</strong>
-									<span>Happy Buyer of April</span>
-								</div>
-							</div>
-						</div>
-						<div class="review">
-							<p>Vestibulum at magna tellus. Vivamus sagittis et nunc ut aliquet. Vivamus porta ligulain orci aliquam, ac vulputate leo vehicula. Mauris porttitor eroshicula. Donec eget ultricies ipsmconsequat rhoncus elit. Antegr sollicitudin ligula nonenim sodales, commodo tem ibus. Duis convallis turpisnisi fringilla. Phasellus ornare euismod varius nullam.</p>
-							<div class="reviewer-info">
-								<img src="images/resource/reviewer3.jpg" alt="" />
-								<div class="reviewer-name">
-									<strong>Leo Ferniender</strong>
-									<span>Happy Buyer of April</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>-->
-
-
 <section>
 	<div class="block remove-bottom">
 	<div class="parallax still" data-velocity="-.05" style="background: rgba(0, 0, 0, 0) url(http://placehold.it/1920x900) no-repeat 50% 0;"></div>
@@ -562,8 +384,6 @@ session_destroy();
 	</div>
 </section>
 
-
-
 <div class="bottom-footer">
 	<div class="container">
 		<p>Copyright 2016, IEPM "Gran Mariscal Ramón Castilla" - Av. Ramón Castilla 425 - 427 - Teléfono 044 - 464021 Telefax: 044 - 464116. - Trujillo - Perú. All Rights Reserved.</p>
@@ -577,7 +397,6 @@ session_destroy();
 		</ul>-->
 	</div>
 </div>
-
 
 </div>
 
@@ -618,7 +437,6 @@ $(document).ready(function(){
         verticalTrackClass: 'track3',
         verticalHandleClass: 'handle3'
     });
-
 
 	/* ============ Customer Reviews ================*/
 	$('.reviews-carousel').owlCarousel({
