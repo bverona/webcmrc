@@ -1,10 +1,3 @@
-<?
-if(!empty($_SESSION['login']))
-{
-    session_destroy();
-    $_SESSION['login']='';
-}
-?>
 <div class="menubar">
     <div class="container">
         <div class="logo"><a href="#" title=""><img class="logo_img" src="../images/ramoncastilla.png" alt=""/></a></div>
@@ -42,7 +35,7 @@ if(!empty($_SESSION['login']))
         <div class="registration-btns">
             <a class="" href="http://www.netschool360.com/cm.ramoncastilla" target="_blank" title=""><i class="fa fa-desktop"></i> Intranet</a>
             <a class="" href="http://www.peru.gob.pe/transparencia/pep_transparencia_lista_planes_frame.asp?id_entidad=15351&id_tema=1" target="_blank" title=""><i class="fa fa-search"></i> Transparencia</a>
-            <a class="" href="login.php" title=""><i class="fa fa-envelope-o"></i> Coorporativo</a>
+            <a class="" href="http://webmail.cmramoncastilla.edu.pe/" title=""><i class="fa fa-envelope-o"></i> Coorporativo</a>
         </div>
     </div>
 </div>
@@ -85,4 +78,3 @@ if(!empty($_SESSION['login']))
     </div>
     <!-- Responsive Menu -->
 </div>
-;

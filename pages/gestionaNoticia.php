@@ -1,7 +1,7 @@
 <?php
 
-    $type=$_POST['type'];
-    $id=$_POST['id'];
+    $type=addslashes($_POST['type']);
+    $id=addslashes($_POST['id']);
 
     if(!empty($_POST["state"])){
         $state=$_POST["state"];

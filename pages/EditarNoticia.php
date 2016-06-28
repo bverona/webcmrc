@@ -25,9 +25,7 @@ if(empty($_SESSION['login']))
 <header>
 
 	    <?php
-            require_once '../Clases/clsNavBar.php';
-            $objNav = new NavBar();
-            echo $objNav->getNavbar2();
+        include "../nvbcmrc.php";
         ?>
 
 </header>
@@ -73,7 +71,7 @@ if(empty($_SESSION['login']))
                     </div>
                     <div class="col-sm-2-offset col-xs-4 col-sm-3 col-lg-2">
                         <div class="form-group">
-                            <a data-toggle="modal" href="#Registar" id="btnsend" onclick="Enviar()" class="btn btn-success">Enviar</a>
+                            <a data-toggle="modal" href="#Editar" id="btnsend" onclick="Enviar()" class="btn btn-success">Enviar</a>
                         </div>
                     </div>
                 </div>
@@ -89,23 +87,19 @@ if(empty($_SESSION['login']))
                             <img src="#" id="imageng" id="imageng" class="img-responsive" alt="Imagen Grande"/>
                         </div>
                     </div>
-                    <div class="col-sm-2-offset col-xs-4 col-sm-3 col-lg-2">
-                        <div class="form-group">
-                            <img src="#" alt=""/>
-                        </div>
-                    </div>
+
                 </div>
             </form>
         </div>
     </div>
 </div>
 
-    <div class="modal fade" tabindex="-1" role="dialog" id="Registar" style="margin-top: 10%; display: none;">
+    <div class="modal fade" tabindex="-1" role="dialog" id="Editar" style="margin-top: 10%; display: none;">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-                    <h4 class="modal-title">Registrar</h4>
+                    <h4 class="modal-title">Editar</h4>
                 </div>
                 <div class="modal-body">
                     <h4 id="mensaje">Enviando...</h4>
@@ -126,8 +120,9 @@ if(empty($_SESSION['login']))
 	</div>
 </div>
 
-<script type="text/javascript" src="../js/jquery2.1.4.js"></script>
+<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="../js/metisMenu.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/sb-admin-2.js"></script>
 <script type="text/javascript" src="../js/Base64.js"></script>
 <script type="text/javascript" src="../js/dataTables.min.js"></script>
@@ -140,12 +135,6 @@ if(empty($_SESSION['login']))
 
     });
 
-    function mostrarImagen(input) {
-
-    }
-    $("#imgp").change(function(){
-
-    });
     function getNotice(id){
         var dataString = 'id='+id;
         $.ajax({
@@ -164,8 +153,11 @@ if(empty($_SESSION['login']))
                  */
                 $("#titulo").val(obj[0]);
                 $("#imagenp").attr("src",obj[1]);
-                $("#imageng").attr("src",obj[2]);
-                $("#texto").html(obj[3]);
+                $("#imageng").attr("src",obj[2])
+                for (i=3 ;i<=obj.length;i++) {
+                    $("#texto").append(obj[i]);
+                }
+                //$("#texto").html(obj[3]);
             }
         });
     }

@@ -3,12 +3,12 @@
     
     public function Conecta() {
     
-       $host="mysql:host=localhost;port=3306;dbname=db_news";
-       $usuario="root";
-       $clave="";
-       //$host="mysql:host=mysql.cmramoncastilla.edu.pe;port=3306;dbname=dbcmramoncastilla";
-       //$usuario="u_cmramon";
-       //$clave="XXXPorNo2035";
+       //$host="mysql:host=localhost;port=3306;dbname=db_news";
+       //$usuario="root";
+       //$clave="";
+       $host="mysql:host=mysql.cmramoncastilla.edu.pe;port=3306;dbname=dbcmramoncastilla";
+       $usuario="u_cmramon";
+       $clave="XXXPorNo2035";
        $dblink=new PDO($host, $usuario, $clave);
        $dblink->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
        

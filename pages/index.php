@@ -35,162 +35,193 @@ session_destroy();
 <div class="theme-layout">
 <header>
 	    <?php
-            require_once '../Clases/clsNavBar.php';
-            $objNav = new NavBar();
-            echo $objNav->getNavbar();
+        include "../navbar.php";
         ?>
 </header>
 <!-- Header -->
 
 <section>
-	<div class="block no-padding">
-		<div class="fa fa-adjust">
-			<div class="row">
-				<div class="col-md-12">
-					<div id="rev_slider_116_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="layer-animations" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
-					<!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
-						<div id="rev_slider_116_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
-							<ul>	
-								<li data-index="rs-396" data-transition="parallaxhorizontal" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/slider1.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide 1" data-description="">
-									<!-- MAIN IMAGE -->
-									<img src="../images/slider1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
-									<!-- LAYER NR. 1 -->
-									<div class="tp-caption layer1 tp-resizeme" 
-										id="slide1-layer1" 
-										data-x="700" data-hoffset="" 
-										data-y="106" data-voffset="-150" 
-										data-width="['auto','auto','auto','auto']"
-										data-height="['auto','auto','auto','auto']"
-										data-transform_idle="o:1;"
-										data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-										data-start="1000" 
-										data-splitin="chars" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										data-elementdelay="0.05" 
-										style="font-size:16px; letter-spacing:0.6px;">Institución Educativa Pública Militar
-									</div>
-									<!-- LAYER NR. 2 -->
-									<div class="tp-caption layer2 tp-resizeme" 
-										id="slide1-layer2" 
-										data-x="700" data-hoffset="" 
-										data-y="140" data-voffset="" 
-										data-width="['auto','auto','auto','auto']"
-										data-height="['auto','auto','auto','auto']"
-										data-transform_idle="o:1;tO:0% 50%;"
-										data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" 
-										data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
-										data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
-										data-start="2000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										data-elementdelay="0.05" 
-										style="font-size:50px;letter-spacing:1px;line-height:70px; font-weight: 800; -webkit-text-fill-color: #40A1EB;-webkit-text-stroke: 2px white;"><span style="color: #40A1EB;">GRAN</span> <span style="color: #40A1EB;">MARISCAL</span> <span style="color: #40A1EB;">RAMÓN</span> <br/> <span style="color: #40A1EB;">CASTILLA</span>
-									</div>
-									<!-- LAYER NR. 3 -->
-									<div class="tp-caption layer3 tp-resizeme" 
-										id="slide1-layer3" 
-										data-x="700" data-hoffset="" 
-										data-y="300" data-voffset="" 
-										data-width="['auto','auto','auto','auto']"
-										data-height="['auto','auto','auto','auto']"
-										data-transform_idle="o:1;"
-										data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" 
-										data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
-										data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-										data-start="3000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="font-size:15px; letter-spacing:0.3px; line-height:32px;">Educación bajo sólidos principios morales y servicio militar no acuartelado.
-									</div>
-
-								</li>
-								<li data-index="slide1" data-transition="parallaxhorizontal" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/slider2.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide 2" data-description="">
-									<img src="../images/slider2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina />
-									<!-- LAYER NR. 1 -->
-									<div class="tp-caption layer1 tp-resizeme" 
-										id="slide2-layer1" 
-										data-x="center" data-hoffset="" 
-										data-y="106" data-voffset="-150" 
-										data-width="['auto','auto','auto','auto']"
-										data-height="['auto','auto','auto','auto']"
-										data-transform_idle="o:1;"
-										data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;" 
-										data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" 
-										data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-										data-start="1000" 
-										data-splitin="chars" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										data-elementdelay="0.05" 
-										style="font-size:16px; letter-spacing:0.6px;">
-									</div>
-									<!-- LAYER NR. 2 -->
-									<div class="tp-caption layer2 tp-resizeme" 
-										id="slide2-layer2" 
-										data-x="center" data-hoffset="" 
-										data-y="140" data-voffset="" 
-										data-width="['auto','auto','auto','auto']"
-										data-height="['auto','auto','auto','auto']"
-										data-transform_idle="o:1;tO:0% 50%;"
-										data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" 
-										data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
-										data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
-										data-start="2000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										data-elementdelay="0.05" 
-										style="font-weight:700; font-size:50px;letter-spacing:1px;line-height:70px;"><span>DISCIPLINA</span> MORALIDAD 
-									</div>
-									<!-- LAYER NR. 3 -->
-									<div class="tp-caption layer2 tp-resizeme" 
-										id="slide2-layer3" 
-										data-x="center" data-hoffset="" 
-										data-y="200" data-voffset="" 
-										data-width="['auto','auto','auto','auto']"
-										data-height="['auto','auto','auto','auto']"
-										data-transform_idle="o:1;tO:0% 50%;"
-										data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;" 
-										data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
-										data-mask_in="x:[100%];y:0;s:inherit;e:inherit;" 
-										data-start="2000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										data-elementdelay="0.05" 
-										style="font-weight:700; font-size:50px;letter-spacing:1px;line-height:70px;">TRABAJO
-									</div>
-									<!-- LAYER NR. 4 -->
-									<div class="tp-caption layer3 tp-resizeme" 
-										id="slide2-layer4" 
-										data-x="center" data-hoffset="" 
-										data-y="280" data-voffset="" 
-										data-width="['auto','auto','auto','auto']"
-										data-height="['auto','auto','auto','auto']"
-										data-transform_idle="o:1;"
-										data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;" 
-										data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;" 
-										data-mask_in="x:0px;y:0px;s:inherit;e:inherit;" 
-										data-start="3000" 
-										data-splitin="none" 
-										data-splitout="none" 
-										data-responsive_offset="on" 
-										style="text-align:center; font-size:15px; letter-spacing:0.3px; line-height:32px;">
-									</div>
-								</li>
-								<!-- SLIDE  -->
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="block no-padding">
+        <div class="">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="rev_slider_116_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-alias="layer-animations" style="margin:0px auto;background-color:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+                        <!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
+                        <div id="rev_slider_116_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
+                            <ul>
+                                <li data-index="rs-396" data-transition="parallaxhorizontal" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="../images/slider1.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide 1" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="../images/slider1.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption layer1 tp-resizeme"
+                                         id="slide1-layer1"
+                                         data-x="700" data-hoffset=""
+                                         data-y="106" data-voffset="-150"
+                                         data-width="['auto','auto','auto','auto']"
+                                         data-height="['auto','auto','auto','auto']"
+                                         data-transform_idle="o:1;"
+                                         data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;"
+                                         data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                         data-start="1000"
+                                         data-splitin="chars"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         data-elementdelay="0.05"
+                                         style="font-size:16px; letter-spacing:0.6px;">Institución Educativa Pública Militar
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption layer2 tp-resizeme"
+                                         id="slide1-layer2"
+                                         data-x="700" data-hoffset=""
+                                         data-y="140" data-voffset=""
+                                         data-width="['auto','auto','auto','auto']"
+                                         data-height="['auto','auto','auto','auto']"
+                                         data-transform_idle="o:1;tO:0% 50%;"
+                                         data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;"
+                                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                         data-mask_in="x:[100%];y:0;s:inherit;e:inherit;"
+                                         data-start="2000"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         data-elementdelay="0.05"
+                                         style="font-size:50px;letter-spacing:1px;line-height:70px; font-weight: 800; -webkit-text-fill-color: #40A1EB;-webkit-text-stroke: 2px white;"><span style="color: #40A1EB;">GRAN</span> <span style="color: #40A1EB;">MARISCAL</span> <span style="color: #40A1EB;">RAMÓN</span> <br/> <span style="color: #40A1EB;">CASTILLA</span>
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption layer3 tp-resizeme"
+                                         id="slide1-layer3"
+                                         data-x="700" data-hoffset=""
+                                         data-y="300" data-voffset=""
+                                         data-width="['auto','auto','auto','auto']"
+                                         data-height="['auto','auto','auto','auto']"
+                                         data-transform_idle="o:1;"
+                                         data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                         data-start="3000"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         style="font-size:15px; letter-spacing:0.3px; line-height:32px;">Educación bajo sólidos principios morales y servicio militar no acuartelado.
+                                    </div>
+                                    <!-- LAYER NR. 4 -->
+                                    <!--<a href="#" class="tp-caption layer4 tp-resizeme rs-parallaxlevel-9"
+                                        id="slide1-layer4"
+                                        data-x="700" data-hoffset=""
+                                        data-y="410" data-voffset=""
+                                        data-width="['auto','auto','auto','auto']"
+                                        data-height="['auto','auto','auto','auto']"
+                                        data-transform_idle="o:1;"
+                                        data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                        data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                        data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                        data-start="3300"
+                                        data-splitin="none"
+                                        data-splitout="none"
+                                        data-responsive_offset="on"
+                                        style="font-size:13px; padding:20px 40px; letter-spacing:0.4px;">NEED LEGAL ASSISTANCE
+                                    </a>-->
+                                </li>
+                                <li data-index="slide1" data-transition="parallaxhorizontal" data-slotamount="default"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="../images/slider2.jpg"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="Slide 2" data-description="">
+                                    <img src="../images/slider2.jpg"  alt=""  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina />
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption layer1 tp-resizeme"
+                                         id="slide2-layer1"
+                                         data-x="center" data-hoffset=""
+                                         data-y="106" data-voffset="-150"
+                                         data-width="['auto','auto','auto','auto']"
+                                         data-height="['auto','auto','auto','auto']"
+                                         data-transform_idle="o:1;"
+                                         data-transform_in="x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;s:2000;e:Power4.easeInOut;"
+                                         data-transform_out="s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;"
+                                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                         data-start="1000"
+                                         data-splitin="chars"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         data-elementdelay="0.05"
+                                         style="font-size:16px; letter-spacing:0.6px;">
+                                    </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption layer2 tp-resizeme"
+                                         id="slide2-layer2"
+                                         data-x="center" data-hoffset=""
+                                         data-y="140" data-voffset=""
+                                         data-width="['auto','auto','auto','auto']"
+                                         data-height="['auto','auto','auto','auto']"
+                                         data-transform_idle="o:1;tO:0% 50%;"
+                                         data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;"
+                                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                         data-mask_in="x:[100%];y:0;s:inherit;e:inherit;"
+                                         data-start="2000"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         data-elementdelay="0.05"
+                                         style="font-weight:700; font-size:50px;letter-spacing:1px;line-height:70px;"><span>DISCIPLINA</span> MORALIDAD
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption layer2 tp-resizeme"
+                                         id="slide2-layer3"
+                                         data-x="center" data-hoffset=""
+                                         data-y="200" data-voffset=""
+                                         data-width="['auto','auto','auto','auto']"
+                                         data-height="['auto','auto','auto','auto']"
+                                         data-transform_idle="o:1;tO:0% 50%;"
+                                         data-transform_in="x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0.01;s:3000;e:Power3.easeOut;"
+                                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                         data-mask_in="x:[100%];y:0;s:inherit;e:inherit;"
+                                         data-start="2000"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         data-elementdelay="0.05"
+                                         style="font-weight:700; font-size:50px;letter-spacing:1px;line-height:70px;">TRABAJO
+                                    </div>
+                                    <!-- LAYER NR. 4 -->
+                                    <div class="tp-caption layer3 tp-resizeme"
+                                         id="slide2-layer4"
+                                         data-x="center" data-hoffset=""
+                                         data-y="280" data-voffset=""
+                                         data-width="['auto','auto','auto','auto']"
+                                         data-height="['auto','auto','auto','auto']"
+                                         data-transform_idle="o:1;"
+                                         data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                         data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                         data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                         data-start="3000"
+                                         data-splitin="none"
+                                         data-splitout="none"
+                                         data-responsive_offset="on"
+                                         style="text-align:center; font-size:15px; letter-spacing:0.3px; line-height:32px;">
+                                    </div>
+                                    <!-- LAYER NR. 4 -->
+                                    <!--<a href="#" class="tp-caption layer4 tp-resizeme rs-parallaxlevel-9"
+                                        id="slide2-layer5"
+                                        data-x="center" data-hoffset=""
+                                        data-y="410" data-voffset=""
+                                        data-width="['auto','auto','auto','auto']"
+                                        data-height="['auto','auto','auto','auto']"
+                                        data-transform_idle="o:1;"
+                                        data-transform_in="y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;s:1500;e:Power3.easeInOut;"
+                                        data-transform_out="s:1000;e:Power3.easeInOut;s:1000;e:Power3.easeInOut;"
+                                        data-mask_in="x:0px;y:0px;s:inherit;e:inherit;"
+                                        data-start="3300"
+                                        data-splitin="none"
+                                        data-splitout="none"
+                                        data-responsive_offset="on"
+                                        style="font-size:13px; padding:20px 40px; letter-spacing:0.4px;">NEED LEGAL ASSISTANCE
+                                    </a>-->
+                                </li>
+                                <!-- SLIDE  -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section>
@@ -328,6 +359,7 @@ session_destroy();
 		</div>
 	</div>
 </section>
+
 <section>
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7900.1718810786!2d-79.08585816100343!3d-8.092718372887788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3c3fb3b141e3%3A0xabcdff834d4deeaa!2sColegio+Militar+Gran+Mariscal+Ram%C3%B3n+Castilla!5e0!3m2!1ses!2spe!4v1464641051540" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </section>

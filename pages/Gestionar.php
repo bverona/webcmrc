@@ -29,9 +29,7 @@ if(empty($_SESSION['login']))
 <div id="wrapper">
 
         <?php
-        require_once '../Clases/clsNavBar.php';
-        $objNav = new NavBar();
-        echo $objNav->getNavbar2();
+        include "../nvbcmrc.php";
         ?>
 
     <div id="page-wrapper" >
@@ -121,11 +119,12 @@ if(empty($_SESSION['login']))
 
 </div>
 
-<script type="text/javascript" src="../js/jquery2.1.4.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/metisMenu.js"></script>
 <script type="text/javascript" src="../js/sb-admin-2.js"></script>
 <script type="text/javascript" src="../js/Base64.js"></script>
-<script type="text/javascript" src="../js/dataTables.min.js"></script>
+<script type="text/javascript" src="../js/datatables.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
 
@@ -158,7 +157,7 @@ if(empty($_SESSION['login']))
     function Eliminar()
     {
         var datos = "type="+2+"&"+"id="+valor;
-        alert(datos);
+
         $.ajax({
             url:"gestionaNoticia.php",
             type:"post",

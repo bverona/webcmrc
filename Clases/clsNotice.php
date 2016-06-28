@@ -107,6 +107,7 @@ class Notice {
         }
 
     }
+
     public function Delete($id){
 
         require_once "clsConexion.php";

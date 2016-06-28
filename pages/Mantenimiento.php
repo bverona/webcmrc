@@ -35,9 +35,7 @@ if(empty($_SESSION['login']))
 <div class="theme-layout">
 <header>
 	    <?php
-            require_once '../Clases/clsNavBar.php';
-            $objNav = new NavBar();
-            echo $objNav->getNavbar();
+            include "../navbar.php";
         ?>
 </header>
 <!-- Header -->

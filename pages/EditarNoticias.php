@@ -27,9 +27,7 @@ if(empty($_SESSION['login']) )
 <header>
 
     <?php
-        require_once '../Clases/clsNavBar.php';
-        $objNav = new NavBar();
-        echo $objNav->getNavbar2();
+    include "../nvbcmrc.php";
     ?>
 
 </header>

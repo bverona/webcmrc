@@ -38,9 +38,7 @@ if(empty($_SESSION['login']))
 <header>
 
     <?php
-        require_once '../Clases/clsNavBar.php';
-        $objNav = new NavBar();
-        echo $objNav->getNavbar();
+        include "../navbar.php";
     ?>
 
 </header>
@@ -54,7 +52,16 @@ if(empty($_SESSION['login']))
 			</div>
 			<div class="row">
 				<div class="col-md-12">
-					<div class="blog-grid">
+                    <?php
+                    if(!empty($_SESSION['login']))
+                    {
+                        echo '<div class="col-sm-offset-4 col-xs-12 col-sm-3">
+                        <a class="btn btn-success " href="Gestionar.php">Regresar</a>
+                    </div>';
+                    }
+                    ?>
+
+					<div class="blog-grid"><br/>
 						<div class="row" id="cuerpo">
                             <?php
                                 require_once '../Clases/clsNotice.php';

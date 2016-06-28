@@ -25,7 +25,26 @@ class NavBar {
         $registro=$objCon->Consultar($sql)->fetch();
 
         return $registro['item'];
-
     }
+
+    public function EditNavbar($html){
+
+        require_once "clsConexion.php";
+        $objCon =new Conexion();
+
+        $sql="update news set titulo='".$title."'".",content='".$body."' where id=".$id;
+
+        $reg=$objCon->Consultar($sql);
+
+        if($reg!=null)
+        {
+            return true;
+        }else
+        {
+            return false;
+        }
+    }
+
+
 
 } 

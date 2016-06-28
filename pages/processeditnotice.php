@@ -1,7 +1,7 @@
 <?php
 
 
-    $id=base64_decode($_POST['id']);
+    $id=addslashes(base64_decode($_POST['id']));
 
     require '../Clases/clsNotice.php';
 

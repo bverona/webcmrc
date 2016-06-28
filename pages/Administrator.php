@@ -25,9 +25,7 @@ if(empty($_SESSION['login']))
 <header>
 
 	    <?php
-            require_once '../Clases/clsNavBar.php';
-            $objNav = new NavBar();
-            echo $objNav->getNavbar2();
+        include "../nvbcmrc.php";
         ?>
 
 </header>
@@ -59,7 +57,7 @@ if(empty($_SESSION['login']))
                             <label class="title">Imagen Pequeña</label>
                         </div>
                         <div class="col-xs-9">
-                            <input type="file" name="imgp" id="imgp">
+                            <input type="file" name="imgp" id="imgp" accept="image/jpeg, image/png">
                         </div>
                     </div>
                     <div class="col-xs-4 ">
@@ -67,7 +65,7 @@ if(empty($_SESSION['login']))
                             <label class="title">Imagen Grande</label>
                         </div>
                         <div class="col-xs-9">
-                            <input type="file" name="imgg" id="imgg">
+                            <input type="file" name="imgg" id="imgg" accept="image/jpeg, image/png">
                         </div>
                     </div>
                     <div class="col-sm-2-offset col-xs-4 col-sm-3 col-lg-2">
@@ -125,8 +123,9 @@ if(empty($_SESSION['login']))
 	</div>
 </div>
 
-<script type="text/javascript" src="../js/jquery2.1.4.js"></script>
+<script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript" src="../js/metisMenu.js"></script>
+<script type="text/javascript" src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/sb-admin-2.js"></script>
 <script type="text/javascript" src="../js/Base64.js"></script>
 <script type="text/javascript" src="../js/dataTables.min.js"></script>
@@ -146,43 +145,24 @@ function isImage(extension)
 }
 
 
-/*
+
 $(':file').change(function()
 {
-    var fileExtension = "";
-
-    //obtenemos un array con los datos del archivo
-    var file = $("#imgp")[0].files[0];
-    //obtenemos el nombre del archivo
-    var fileName = file.name;
-    //obtenemos la extensión del archivo
-    fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
-    //obtenemos el tamaño del archivo
-    var fileSize = file.size;
-    //obtenemos el tipo de archivo image/png ejemplo
-    var fileType = file.type;
-
-    if(!isImage(fileExtension)){
-        alert('Solo debe Seleccionar imágenes');
-        $("#imgp").val('');
-    }
-
-    //obtenemos un array con los datos del archivo
-    var file = $("#imgg")[0].files[0];
-    //obtenemos el nombre del archivo
-    var fileName = file.name;
-    //obtenemos la extensión del archivo
-    fileExtension = fileName.substring(fileName.lastIndexOf('.') + 1);
-    var fileType = file.type;
-    //mensaje con la información del archivo
-
-    if(!isImage(fileExtension)){
-        alert('Solo debe Seleccionar imágenes');
-        $("#imgg").val('');
-    }
-
+    var width = jQuery($(".img-responsive")).width();
+    var new_width = 340;
+    //if (width > new_width){
+    //    var height = jQuery(this).height();
+    //var calculo = Math.round((100*new_width)/ width); //porcentaje
+    //var new_height = Math.round((height*calculo)/100);
+    var new_height = 400;
+    jQuery($(".img-responsive")).css( {
+        width : new_width+'px',
+        height : new_height+'px'
+    } );
+    //}
 });
-*/
+
+   /**/
 
 function Mostrarp(input){
     if (input.files && input.files[0]) {
@@ -240,7 +220,7 @@ $('#imgg').change(function()
     //mensaje con la información del archivo
     if(!isImage(fileExtension)){
         alert('Solo debe Seleccionar imágenes');
-        $("#imgp").val('');
+        $("#imgg").val('');
     }
 
     Mostrarg(this);
@@ -265,7 +245,7 @@ $(function(){
         if($("#titulo").val()===""){
             $("#mensaje").html("Ingrese título");
             $("#titulo").focus();
-        }else if (typeof($("#contenido").html())==="undefined"){
+        }else if (typeof($("#texto").html())==="undefined"){
             $("#mensaje").html("Ingrese contenido de noticia");
         }else if (typeof(filep)==="undefined"){
             $("#mensaje").html("Seleccione la Imagen Pequeña");
@@ -285,16 +265,12 @@ $(function(){
                 contentType: false,
                 processData: false,
                 beforeSend:function(){
-                    $("#mensaje").html("Enviando datos...");
+                    $("#mensaje").html("Enviando, espere un momento...");
                 }
+            }).done(function(data){
+                $("#mensaje").html(data);
+                location.href="Gestionar.php"
             })
-                .done(function (res) {
-                    $('#titulo').val('');
-                    $('#imgp').val('');
-                    $('#imgg').val('');
-                    $('#texto').val('');
-                    $("#mensaje").val(res);
-                });
          }
 
     });
